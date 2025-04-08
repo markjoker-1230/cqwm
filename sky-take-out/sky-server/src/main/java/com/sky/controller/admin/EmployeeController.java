@@ -89,7 +89,7 @@ public class EmployeeController {
     }
 
     /**
-     * 分页查询
+     * 员工分页查询
      * @param employeePageQueryDTO
      * @return
      */
@@ -98,7 +98,7 @@ public class EmployeeController {
     public Result<PageResult> page(EmployeePageQueryDTO employeePageQueryDTO){
         log.info("员工分页查询,参数为：{}",employeePageQueryDTO);
         PageResult pageResult =employeeService.pageQuery(employeePageQueryDTO);
-        return null;
+        return Result.success(pageResult);
     }
 
 }
